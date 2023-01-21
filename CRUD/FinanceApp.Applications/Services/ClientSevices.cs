@@ -27,24 +27,27 @@ namespace FinanceApp.Applications.Services
 
         public void Delete(Guid entityId)
         {
-            throw new NotImplementedException();
+            clientRepo.Delete(entityId);
+            clientRepo.SaveChanges();
         }
 
         public void Edit(Clients entity)
         {
             if (entity == null)
-                throw new ArgumentNullException("'Client' is required");
+                throw new ArgumentNullException("'Client' is required for editing");
+            clientRepo.Edit(entity);
+            clientRepo.SaveChanges();
 
         }
 
         public List<Clients> GetAll()
         {
-            throw new NotImplementedException();
+            return clientRepo.GetAll();
         }
 
         public Clients GetById(Guid entityId)
         {
-            throw new NotImplementedException();
+            return clientRepo.GetById(entityId);  
         }
     }
 }

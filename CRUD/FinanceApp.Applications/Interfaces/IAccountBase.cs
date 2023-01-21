@@ -8,7 +8,7 @@ using FinanceApp.Controller.Interfaces;
 
 namespace FinanceApp.Applications.Interfaces
 {
-    public interface IAccountBase<TEntidad, TEntidadId>: IAdd<TEntidad>, IEdit<TEntidad>, IList<TEntidad, TEntidadId>
+    public interface IAccountBase<TEntidad, TEntidadId>: IAdd<TEntidad>, IList<TEntidad, TEntidadId>
     {
 
     }

@@ -8,7 +8,14 @@ using FinanceApp.Controller.Interfaces;
 
 namespace FinanceApp.Controller.Interfaces.Repositories
 {
-    public interface IRepositoryAccounts<TEntity, TEntityId> : IAdd<TEntity>, IEdit<TEntity>, IList<TEntity, TEntityId>, ISave
+    public interface IRepositoryAccounts<TEntity, TEntityId> : IAdd<TEntity>, IList<TEntity, TEntityId>, ISave
     {
+        void CancelAccount(TEntity entity);
+
+        void ChangeStatus(TEntity entity);
+
+        void AddBalance(TEntity entity, decimal balance);
+
+        void RemoveBalance(TEntity entity, decimal balance);
     }
 }
