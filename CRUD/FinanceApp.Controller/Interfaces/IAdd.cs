@@ -8,6 +8,6 @@ namespace FinanceApp.Controller.Interfaces
 {
     public interface IAdd<TEntity>
     {
-        Tentity Add(TEntity entity);
+        TEntity Add(TEntity entity);
     }
 }
