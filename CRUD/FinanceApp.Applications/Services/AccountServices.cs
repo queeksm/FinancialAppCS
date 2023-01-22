@@ -42,7 +42,7 @@ namespace FinanceApp.Applications.Services
             return accountRepo.GetById(entityId);
         }
 
-        public void CancelAccounts (Accounts entity)
+        public void CancelAccount (Accounts entity)
         {
             if (entity == null)
                 throw new ArgumentNullException("You cannot cancel a non existant account.");
