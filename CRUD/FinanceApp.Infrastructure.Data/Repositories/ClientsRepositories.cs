@@ -25,7 +25,7 @@ namespace FinanceApp.Infrastructure.Data.Repositories
             int age = (now - dob) / 10000;
             if (age < 18)
             {
-                throw new InvalidDataException("You can't edit the birthdate to be below the legal age");
+                throw new Exception("You can't edit the birthdate to be below the legal age");
             };
             
         }
