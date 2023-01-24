@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "q70++eY4k6m+8X6MehJIk0e3dknioI3NtGneMg9Lo+99zMgUzxyo2kvtt6XRoI6LnBo7jRjdr8lNEMCTWjQfCg==",
+  "dgSpecHash": "QuLe+W86UHx91ZvWsHIJ7Xx5gmSuecuzCDAN9gXRvyQf2SjY2etW5g0RtGdzdw7Bz2WM0zSSQWpH0WF9dcei4A==",
   "success": true,
-  "projectFilePath": "D:\\Project\\CRUD\\FinanceApp.Applications\\FinanceApp.Applications.csproj",
+  "projectFilePath": "D:\\Project2\\FinancialAppCS\\CRUD\\FinanceApp.Applications\\FinanceApp.Applications.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

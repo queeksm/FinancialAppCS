@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Project\\CRUD\\FinanceApp.Applications\\FinanceApp.Applications.csproj": {}
+    "D:\\Project2\\FinancialAppCS\\CRUD\\FinanceApp.Applications\\FinanceApp.Applications.csproj": {}
   },
   "projects": {
-    "D:\\Project\\CRUD\\FinanceApp.Applications\\FinanceApp.Applications.csproj": {
+    "D:\\Project2\\FinancialAppCS\\CRUD\\FinanceApp.Applications\\FinanceApp.Applications.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Project\\CRUD\\FinanceApp.Applications\\FinanceApp.Applications.csproj",
+        "projectUniqueName": "D:\\Project2\\FinancialAppCS\\CRUD\\FinanceApp.Applications\\FinanceApp.Applications.csproj",
         "projectName": "FinanceApp.Applications",
-        "projectPath": "D:\\Project\\CRUD\\FinanceApp.Applications\\FinanceApp.Applications.csproj",
+        "projectPath": "D:\\Project2\\FinancialAppCS\\CRUD\\FinanceApp.Applications\\FinanceApp.Applications.csproj",
         "packagesPath": "C:\\Users\\Queeksm\\.nuget\\packages\\",
-        "outputPath": "D:\\Project\\CRUD\\FinanceApp.Applications\\obj\\",
+        "outputPath": "D:\\Project2\\FinancialAppCS\\CRUD\\FinanceApp.Applications\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Queeksm\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Project\\CRUD\\FinanceApp.Controller\\FinanceApp.Controller.csproj": {
-                "projectPath": "D:\\Project\\CRUD\\FinanceApp.Controller\\FinanceApp.Controller.csproj"
+              "D:\\Project2\\FinancialAppCS\\CRUD\\FinanceApp.Controller\\FinanceApp.Controller.csproj": {
+                "projectPath": "D:\\Project2\\FinancialAppCS\\CRUD\\FinanceApp.Controller\\FinanceApp.Controller.csproj"
               }
             }
           }
@@ -63,14 +63,14 @@
         }
       }
     },
-    "D:\\Project\\CRUD\\FinanceApp.Controller\\FinanceApp.Controller.csproj": {
+    "D:\\Project2\\FinancialAppCS\\CRUD\\FinanceApp.Controller\\FinanceApp.Controller.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Project\\CRUD\\FinanceApp.Controller\\FinanceApp.Controller.csproj",
+        "projectUniqueName": "D:\\Project2\\FinancialAppCS\\CRUD\\FinanceApp.Controller\\FinanceApp.Controller.csproj",
         "projectName": "FinanceApp.Controller",
-        "projectPath": "D:\\Project\\CRUD\\FinanceApp.Controller\\FinanceApp.Controller.csproj",
+        "projectPath": "D:\\Project2\\FinancialAppCS\\CRUD\\FinanceApp.Controller\\FinanceApp.Controller.csproj",
         "packagesPath": "C:\\Users\\Queeksm\\.nuget\\packages\\",
-        "outputPath": "D:\\Project\\CRUD\\FinanceApp.Controller\\obj\\",
+        "outputPath": "D:\\Project2\\FinancialAppCS\\CRUD\\FinanceApp.Controller\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Queeksm\\AppData\\Roaming\\NuGet\\NuGet.Config",

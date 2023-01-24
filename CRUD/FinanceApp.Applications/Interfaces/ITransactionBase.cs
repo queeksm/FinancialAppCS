@@ -8,13 +8,13 @@ using FinanceApp.Controller.Interfaces;
 
 namespace FinanceApp.Applications.Interfaces
 {
-    public interface ITransactionBase<TEntity,TEntityId, TAccount, TAccount2>:IAdd<TEntity>, IList<TEntity, TEntityId>
+    public interface ITransactionBase<TEntity,TEntityId> :IAdd<TEntity>, IList<TEntity, TEntityId>
     {
-        void Deposit(TEntity entity,TAccount account, decimal amount);
+        void Deposit(TEntity entity, Guid accountid, decimal amount);
 
-        void Withdraw(TEntity entity,TAccount account, decimal amount);
+        void Withdraw(TEntity entity, Guid accountid, decimal amount);
 
-        void Transfer(TEntity entity,TAccount account, TAccount2 account2, decimal amount);
+        void Transfer(TEntity entity, Guid accountid, Guid accountid2, decimal amount);
         
     }
 }

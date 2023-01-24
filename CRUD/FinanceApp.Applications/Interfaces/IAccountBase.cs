@@ -8,14 +8,15 @@ using FinanceApp.Controller.Interfaces;
 
 namespace FinanceApp.Applications.Interfaces
 {
-    public interface IAccountBase<TEntity, TEntityId>: IAdd<TEntity>, IList<TEntity, TEntityId>
+    public interface IAccountBase<TEntity, TEntityId>: IList<TEntity, TEntityId>
     {
-        void CancelAccount(TEntity entity);
 
-        void ChangeStatus(TEntity entity);
+        TEntity AccAdd(TEntity entity, TEntityId entityId);
+        void CancelAccount(TEntityId entityId);
 
-        void AddBalance(TEntity entity, decimal balance);
+        void ChangeStatus(TEntityId entityId);
 
-        void RemoveBalance(TEntity entity, decimal balance);
+        void AddBalance(TEntityId entityId, decimal balance);
+        
     }
 }

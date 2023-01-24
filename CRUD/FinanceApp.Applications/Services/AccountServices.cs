@@ -21,15 +21,17 @@ namespace FinanceApp.Applications.Services
             accountRepo = _accountRepo;
             clientRepo = _clientRepo;            
         }
-        public Accounts Add(Accounts entity)
+        public Accounts AccAdd(Accounts entity, Guid id)
         {
             if (entity == null)
-                throw new ArgumentNullException("'Account' cannot be null");
-            var addAccount = accountRepo.Add(entity);
+                throw new ArgumentNullException("'Account' cannot be null");            
 
-            if (clientRepo.GetById(entity.Client.Id) == null)
+            if (clientRepo.GetById(id) == null)
                 throw new NullReferenceException("The client associated to this account does not exist");
-            
+
+            var addAccount = accountRepo.AccAdd(entity,id);
+            addAccount.Client.Accounts.Add(entity);                       
+            clientRepo.SaveChanges();
             return addAccount;
         }
         public List<Accounts> GetAll()
@@ -42,36 +44,44 @@ namespace FinanceApp.Applications.Services
             return accountRepo.GetById(entityId);
         }
 
-        public void CancelAccount (Accounts entity)
+        public void CancelAccount (Guid entityId)
         {
-            if (entity == null)
-                throw new ArgumentNullException("You cannot cancel a non existant account.");
-            if (entity.AccountBalance != 0)
+            var selectedAccount = accountRepo.GetById(entityId);            
+            if (selectedAccount.AccountBalance != 0)
                 throw new ArgumentException("You cannot cancel an account with a balance different from 0");
-            entity.AccountCancelled = true;
+            selectedAccount.AccountCancelled = true;
+            clientRepo.SaveChanges();
         }
 
-        public void ChangeStatus (Accounts entity)
+        public void ChangeStatus (Guid entityId)
         {
-            if (entity == null)
-                throw new NullReferenceException("You cannot change the status of a non existant account");
-            entity.AccountState = !entity.AccountState;
+            var selectedAccount = accountRepo.GetById(entityId);
+
+            selectedAccount.AccountState = !selectedAccount.AccountState;
+            clientRepo.SaveChanges();
         }
 
-        public void AddBalance(Accounts entity, decimal balance)
+        public void AddBalance(Guid entityId, decimal balance)
         {
-            if(entity == null)
-                throw new ArgumentNullException("You cannot add funds to a non existant account");
-            entity.AccountBalance += balance;
-        }
-
-        public void RemoveBalance(Accounts entity, decimal balance)
-        {
-            if (entity == null)
-                throw new ArgumentNullException("You cannot add funds to a non existant account");
-            if (entity.AccountBalance - balance < 0)
-                throw new ArgumentException("You can't remove more funds than the actual balance of the account");
-            entity.AccountBalance -= balance;
+            var selectedAccount = accountRepo.GetById(entityId);
+            if (balance >= 0)
+            {
+                
+                if (selectedAccount == null)
+                    throw new ArgumentNullException("You cannot add funds to a non existant account");
+                selectedAccount.AccountBalance += balance;
+                clientRepo.SaveChanges();
+            }
+            else
+            {                
+                if (selectedAccount == null)
+                    throw new ArgumentNullException("You cannot add funds to a non existant account");
+                if (selectedAccount.AccountBalance - balance < 0)
+                    throw new ArgumentException("You can't remove more funds than the actual balance of the account");
+                selectedAccount.AccountBalance -= balance;
+                clientRepo.SaveChanges();
+            }
+            
         }
     }
 }

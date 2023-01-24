@@ -11,8 +11,8 @@ namespace FinanceApp.Controller
         public Guid Id { get; set; }        
         public string TransactionType { get; set; }
         public decimal Amount { get; set; }
-        public Accounts ReceiverAccount { get; set; }
-        public Accounts SendingAccount { get; set; }
+        public Guid ReceiverAccount { get; set; }
+        public Accounts? SendingAccount { get; set; }
 
     }
 }
