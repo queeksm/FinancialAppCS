@@ -8,8 +8,12 @@ using FinanceApp.Controller.Interfaces;
 
 namespace FinanceApp.Controller.Interfaces.Repositories
 {
-    public interface IRepositoryTransactions<TEntity, TEntityId> : IAdd<TEntity>, IList<TEntity, TEntityId>, ISave
+    public interface IRepositoryTransactions<TEntity, TEntityId> :IAdd<TEntity>, IList<TEntity, TEntityId>, ISave
     {
-        void CancelTransaction(TEntityId entityId);
+        void Deposit(TEntity entity, Guid accountId, decimal amount);
+
+        void Withdraw(TEntity entity, Guid accountId, decimal amount);
+
+        void Transfer(TEntity entity, Guid accountId, Guid account2, decimal amount);
     }
 }
